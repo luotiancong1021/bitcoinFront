@@ -11,35 +11,24 @@
 
 <body>
     <div id="app">
-        <el-table
-        :data="showRecentBlocks">
-        <el-table-column label="高度" width="180">
-            <template slot-scope="scope">
-                <a :href="'http://www.baidu.com/' + scope.row.height">{{scope.row.height}}</a>
-            </template>
-        </el-table-column>
-        <el-table-column
-          prop="showtime"
-          label="时间"
-          width="180">
-        </el-table-column>
-        <el-table-column
-          prop="txSize"
-          label="交易数量"
-          width="180">
-        </el-table-column>
-        <el-table-column
-          prop="showSizeOnDisk"
-          label="大小">
-        </el-table-column>
-      </el-table>
+      <h1>Block #{{blockDetail.height}}</h1>  <br>
+
+      Number Of Transactions:	{{blockDetail.txSize}} <br>
+      Height:	{{blockDetail.height}} <br>
+      Timestamp：	{{blockDetail.time}} <br>
+      Difficulty：	{{blockDetail.difficulty}} <br>
+      Size：	{{blockDetail.sizeOnDisk}} <br>
+      Hash：	{{blockDetail.blockhash}} <br>
+      Previous Block：	{{blockDetail.prevBlockhash}} <br>
+      Next Block(s)：	{{blockDetail.nextBlockhash}}<br>
+      Merkle： {{blockDetail.merkleRoot}} <br>
     </div>
 
     <script src="assets/js/axios.min.js"></script>
     <script src="assets/js/common.js"></script>
     <script src="assets/js/vue.js"></script>
     <script src="assets/js/elementui.js"></script>
-    <script src="viewmodels/BlockLook.js"></script>
+    <script src="viewmodels/Blockcoin.js"></script>
 
 </body>
 

@@ -15,7 +15,7 @@
         :data="showRecentBlocks">
         <el-table-column label="高度" width="180">
             <template slot-scope="scope">
-                <a :href="'http://www.baidu.com/' + scope.row.height">{{scope.row.height}}</a>
+              <a :href="' http://192.168.25.1:8081/Blockcoin?blockhash=' + scope.row.blockhash">{{scope.row.height}}</a>
             </template>
         </el-table-column>
         <el-table-column
